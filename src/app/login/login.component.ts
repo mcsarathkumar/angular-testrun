@@ -1,15 +1,37 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
+import { UserService } from '../_services/user.service';
+import {UserCredentials, LoginResponse} from '../_models/animal.interface';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-  constructor() { }
+  errorMessage = '';
 
-  ngOnInit() {
+  constructor(private userService: UserService, private router: Router) { }
+
+  doLogin(form: NgForm) {
+    const userCredentials: UserCredentials = {
+      user: form.value.email,
+      password: form.value.password
+    }
+    this.userService.login(userCredentials).subscribe((response: LoginResponse) => {
+      if (response.isAuthorized) {
+        this.userService.credentialValueChange.next(true);
+        if (response.isAdmin) {
+          this.router.navigate(['add']);
+        } else {
+          this.router.navigate(['pets']);
+        }
+      } else {
+        this.errorMessage = 'Invalid Credentials';
+      }
+    });
   }
 
 }
