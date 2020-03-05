@@ -1,1 +1,10 @@
 .pointer {cursor: pointer;}
+.text-truncate-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-align: justify;
+  /* text-justify: inter-word; */
+}

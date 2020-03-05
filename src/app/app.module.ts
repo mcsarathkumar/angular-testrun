@@ -12,11 +12,13 @@ import { LoginComponent } from './login/login.component';
 import { E404Component } from './e404/e404.component';
 import { AnimalService } from './_services/animal.service';
 import { UserService } from './_services/user.service';
+import { PetsDescriptionComponent } from './pets-description/pets-description.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule , HttpClientModule, AppRoutingModule],
-  declarations: [ AppComponent,  HomeComponent, HeaderComponent, PetsComponent, LoginComponent, E404Component ],
+  declarations: [ AppComponent,  HomeComponent, HeaderComponent, PetsComponent, LoginComponent, E404Component, PetsDescriptionComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [AnimalService, UserService]
+  providers: [AnimalService, UserService],
+  entryComponents: [PetsDescriptionComponent]
 })
 export class AppModule { }

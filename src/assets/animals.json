@@ -1,42 +1,42 @@
 [
   {
     "name": "Dog",
-    "description": "Dog is a friend",
+    "description": "The domestic dog (Canis lupus familiaris when considered a subspecies of the wolf or Canis familiaris when considered a distinct species) is a mammal, a member of the genus Canis (canines), which forms part of the wolf-like canids, and is the most widely abundant terrestrial carnivore. The dog and the extant gray wolf are sister taxa as modern wolves are not closely related to the wolves that were first domesticated, which implies that the direct ancestor of the dog is extinct. The dog was the first species to be domesticated, and has been selectively bred over millennia for various behaviors, sensory capabilities, and physical attributes.",
     "price": 2500,
     "quantity": 5,
     "image": "https://p1.img.cctvpic.com/photoworkspace/contentimg/2017/06/14/2017061415015446105.jpg"
   },
   {
     "name": "Cat",
-    "description": "Cat mews",
+    "description": "The cat (Felis catus) is a small carnivorous mammal. It is the only domesticated species in the family Felidae and often referred to as the domestic cat to distinguish it from wild members of the family. The cat is either a house cat, a farm cat or a feral cat; latter ranges freely and avoids human contact. Domestic cats are valued by humans for companionship and for their ability to hunt rodents. About 60 cat breeds are recognized by various cat registries.",
     "price": 1000,
     "quantity": 3,
     "image": "https://www.thewowstyle.com/wp-content/uploads/2015/04/cats.jpg"
   },
   {
     "name": "Parrot",
-    "description": "Parrot speaks",
+    "description": "Parrots, also known as psittacines sɪtəsaɪnz, are birds of the roughly 393 species in 92 genera comprising the order Psittaciformes, found mostly in tropical and subtropical regions. The order is subdivided into three superfamilies: the Psittacoidea (trueparrots), the Cacatuoidea (cockatoos), and the Strigopoidea (New Zealand parrots). Parrots have a generally pantropical distribution with several species inhabiting temperate regions in the Southern Hemisphere, as well. The greatest diversity of parrots is in South America and Australasia.",
     "price": 750,
     "quantity": 10,
     "image": "https://s1.1zoom.me/b4746/602/Parrots_Ara_(genus)_Birds_Two_Branches_567897_1366x768.jpg"
   },
   {
     "name": "Fish",
-    "description": "Fish lives in water",
+    "description": "Fish are gill-bearing aquatic craniate animals that lack limbs with digits. They form a sister group to the tunicates, together forming the olfactores. Included in this definition are the living hagfish, lampreys, and cartilaginous and bony fish as well as various extinct related groups. Tetrapods emerged within lobe-finned fishes, so cladistically they are fish as well. However, traditionally fish are rendered paraphyletic by excluding the tetrapods (i.e., the amphibians, reptiles, birds and mammals which all descended from within the same ancestry).",
     "price": 2500,
     "quantity": 5,
     "image": "https://images.wallpaperscraft.com/image/fish_underwater_swimming_beautiful_65130_1366x768.jpg"
   },
   {
     "name": "Love Birds",
-    "description": "Love birds lives as pair",
+    "description": "A lovebird is the common name of Agapornis (Greek: αγάπη agape 'love'; όρνις ornis 'bird'), a small genus of parrot. Eight species are native to the African continent, with the grey-headed lovebird being native to Madagascar.Social and affectionate, the name comes from the parrots' strong, monogamous pair bonding and the long periods which paired birds spend sitting together. Lovebirds live in small flocks and eat fruit, vegetables, grasses, and seeds. Black-winged lovebirds also eat insects and figs, and black-collared lovebirds have a special dietary requirement for native figs, making them problematic to keep in captivity.",
     "price": 4000,
     "quantity": 5,
     "image": "https://www.10wallpaper.com/wallpaper/1366x768/1410/Cute_Love_Birds_Kissing-Photo_HD_Wallpaper_1366x768.jpg"
   },
   {
     "name": "Rabbit",
-    "description": "Rabbit eats carrot",
+    "description": "Rabbits are small mammals in the family Leporidae of the order Lagomorpha (along with the hare and the pika). Oryctolagus cuniculus includes the European rabbit species and its descendants, the world's 305 breeds of domestic rabbit. Sylvilagus includes 13 wild rabbit species, among them the seven types of cottontail. The European rabbit, which has been introduced on every continent except Antarctica, is familiar throughout the world as a wild prey animal and as a domesticated form of livestock and pet. With its widespread effect on ecologies and cultures, the rabbit (or bunny) is, in many areas of the world, a part of daily life—as food, clothing, a companion, and as a source of artistic inspiration.",
     "price": 3500,
     "quantity": 6,
     "image": "https://images.wallpaperscraft.com/image/rabbit_grass_food_cute_57811_1366x768.jpg"
