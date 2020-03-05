@@ -16,7 +16,6 @@ export class PetsComponent implements OnInit {
   ngOnInit() {
     this.animalService.getAnimals().subscribe(response => {
       this.animals = response;
-      console.log(this.animals);
     });
   }
 
