@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Dog",
+    "description": "Dog is a friend",
+    "price": 2500,
+    "quantity": 5,
+    "image": "https://p1.img.cctvpic.com/photoworkspace/contentimg/2017/06/14/2017061415015446105.jpg"
+  },
+  {
+    "name": "Cat",
+    "description": "Cat mews",
+    "price": 1000,
+    "quantity": 3,
+    "image": "https://www.thewowstyle.com/wp-content/uploads/2015/04/cats.jpg"
+  },
+  {
+    "name": "Parrot",
+    "description": "Parrot speaks",
+    "price": 750,
+    "quantity": 10,
+    "image": "https://s1.1zoom.me/b4746/602/Parrots_Ara_(genus)_Birds_Two_Branches_567897_1366x768.jpg"
+  },
+  {
+    "name": "Fish",
+    "description": "Fish lives in water",
+    "price": 2500,
+    "quantity": 5,
+    "image": "https://www.wallpapermaiden.com/wallpaper/7260/download/1366x768/coral-fish-underwater-ocean.jpg"
+  },
+  {
+    "name": "Love Birds",
+    "description": "Love birds lives as pair",
+    "price": 4000,
+    "quantity": 5,
+    "image": "https://www.10wallpaper.com/wallpaper/1366x768/1410/Cute_Love_Birds_Kissing-Photo_HD_Wallpaper_1366x768.jpg"
+  },
+  {
+    "name": "Rabbit",
+    "description": "Rabbit eats carrot",
+    "price": 3500,
+    "quantity": 6,
+    "image": "https://images.wallpaperscraft.com/image/rabbit_grass_food_cute_57811_1366x768.jpg"
+  }
+]

@@ -1,13 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { PetsComponent } from './pets/pets.component';
+import { LoginComponent } from './login/login.component';
+import { E404Component } from './e404/e404.component';
+import { PetsService } from './_services/pets.service';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  imports:      [ BrowserModule, FormsModule , HttpClientModule, AppRoutingModule],
+  declarations: [ AppComponent,  HomeComponent, HeaderComponent, PetsComponent, LoginComponent, E404Component ],
+  bootstrap:    [ AppComponent ],
+  providers: [PetsService]
 })
 export class AppModule { }
