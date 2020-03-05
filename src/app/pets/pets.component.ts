@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimalService } from '../_services/animal.service';
+import { AnimalStructure } from '../_models/animal.interface';
 
 @Component({
   selector: 'app-pets',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PetsComponent implements OnInit {
 
-  constructor() { }
+  animals: AnimalStructure[] = [];
+
+  constructor(private animalService: AnimalService) { }
 
   ngOnInit() {
+    this.animalService.getAnimals().subscribe(response => {
+      this.animals = response;
+      console.log(this.animals);
+    });
   }
 
 }

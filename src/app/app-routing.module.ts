@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { E404Component } from './e404/e404.component';
 
 const appRoutes: Route[] = [
+  {path: '', pathMatch: 'full', redirectTo: 'home'},
   {component: HomeComponent, path: 'home'},
   {component: LoginComponent, path: 'login'},
   {component: PetsComponent, path: 'pets'},
