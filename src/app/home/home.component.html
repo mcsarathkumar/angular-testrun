@@ -1,20 +1,20 @@
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item" [ngClass]="current(1)">
       <img src="https://www.solvay.com/sites/g/files/srpend221/files/styles/header/https/media.solvay.com/medias/domain1446/media404/61286-64yp6dvj7q.jpg?itok=eyFpMF4T" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item" [ngClass]="current(2)">
       <img src="https://www.lifewithdogs.tv/wp-content/uploads/2015/04/4.3.15-Dogs-and-Baby-Animals2.jpg" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item" [ngClass]="current(3)">
       <img src="https://sportsmensnation.com/images/episode-photos/_episodePhotoLarge/911469244-1200x737.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+  <a class="carousel-control-prev pointer" role="button" (click)="prev()">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  <a class="carousel-control-next pointer" role="button"(click)="next()">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
