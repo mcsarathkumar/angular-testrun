@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.router.events.subscribe(res => {
       if(res instanceof NavigationEnd) {
-        this.activateKeyword = res.url.split('/')[1];
+        this.activateKeyword = res.urlAfterRedirects.split('/')[1];
       }
     });
     this.userService.credentialValueChange.subscribe(response => {
