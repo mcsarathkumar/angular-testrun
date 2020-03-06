@@ -1,6 +1,6 @@
 import { Injectable, ComponentFactoryResolver, ApplicationRef, Injector, EmbeddedViewRef, ComponentRef } from '@angular/core';
 import { PetsDescriptionComponent } from '../pets-description/pets-description.component';
-import { AnimalStructure } from '../_models/animal';
+import { AnimalStructure } from '../_models/animals';
 
 @Injectable()
 export class DynamicPetDescriptionService {
@@ -22,7 +22,7 @@ constructor(
   }
 
   removeDialogComponentFromBody() {
-  this.appRef.detachView(this.dialogComponentRef.hostView);
-  this.dialogComponentRef.destroy();
+    this.appRef.detachView(this.dialogComponentRef.hostView);
+    this.dialogComponentRef.destroy();
 }
 }

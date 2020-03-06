@@ -8,9 +8,9 @@ import { AnimalStructure } from '../_models/animals';
 })
 export class PetsDescriptionComponent implements OnInit {
 
-  @Input() petsDetails: AnimalStructure = {};
+  @Input() petsDetails: AnimalStructure = null;
   @ViewChild('modal', {static: false}) myModal: ElementRef;
-  constructor(public renderer: Renderer2) { }
+  constructor(public renderer: Renderer2, public el: ElementRef) { }
 
   ngOnInit() {
   }
@@ -28,7 +28,7 @@ export class PetsDescriptionComponent implements OnInit {
     this.renderer.addClass(div, 'fade');
     this.renderer.addClass(div, 'show');
     this.renderer.setAttribute(div, 'id', 'backdropMyModal');
-    document.getElementsByTagName('body')[0].appendChild(div);
+    document.body.appendChild(div);
   }
 
   closeModal() {
