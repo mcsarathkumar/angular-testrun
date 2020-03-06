@@ -1,4 +1,5 @@
-import { Component, OnInit, AfterViewInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Renderer2, ViewChild, ElementRef, Input } from '@angular/core';
+import { AnimalStructure } from '../_models/animals';
 
 @Component({
   selector: 'app-pets-description',
@@ -7,6 +8,7 @@ import { Component, OnInit, AfterViewInit, Renderer2, ViewChild, ElementRef } fr
 })
 export class PetsDescriptionComponent implements OnInit {
 
+  @Input() petsDetails: AnimalStructure = {};
   @ViewChild('modal', {static: false}) myModal: ElementRef;
   constructor(public renderer: Renderer2) { }
 
@@ -18,6 +20,7 @@ export class PetsDescriptionComponent implements OnInit {
   }
 
   openModal() {
+    console.log(this.petsDetails);
     this.renderer.addClass(this.myModal.nativeElement, 'show');
     this.renderer.setStyle(this.myModal.nativeElement, 'display', 'block');
     const div = this.renderer.createElement('div');

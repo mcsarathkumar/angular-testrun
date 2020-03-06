@@ -13,12 +13,13 @@ import { E404Component } from './e404/e404.component';
 import { AnimalService } from './_services/animal.service';
 import { UserService } from './_services/user.service';
 import { PetsDescriptionComponent } from './pets-description/pets-description.component';
+import { DynamicPetDescriptionService } from './_services/dynamic-pet-description.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule , HttpClientModule, AppRoutingModule],
   declarations: [ AppComponent,  HomeComponent, HeaderComponent, PetsComponent, LoginComponent, E404Component, PetsDescriptionComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [AnimalService, UserService],
+  providers: [AnimalService, UserService, DynamicPetDescriptionService],
   entryComponents: [PetsDescriptionComponent]
 })
 export class AppModule { }

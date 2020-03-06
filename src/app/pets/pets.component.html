@@ -5,7 +5,7 @@
       <div class="card-body">
         <h5 class="card-title">{{animal.name}}</h5>
         <p class="card-text text-truncate-3">{{animal.description}}</p>
-        <button type="button" class="btn btn-primary">Know More</button>
+        <button type="button" class="btn btn-primary" (click)="openPetsDescriptionModal(animal)">Know More</button>
       </div>
     </div>
   </div>
