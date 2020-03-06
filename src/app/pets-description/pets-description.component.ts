@@ -20,7 +20,6 @@ export class PetsDescriptionComponent implements OnInit {
   }
 
   openModal() {
-    console.log(this.petsDetails);
     this.renderer.addClass(this.myModal.nativeElement, 'show');
     this.renderer.setStyle(this.myModal.nativeElement, 'display', 'block');
     const div = this.renderer.createElement('div');
