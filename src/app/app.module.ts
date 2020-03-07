@@ -14,9 +14,10 @@ import { AnimalService } from './_services/animal.service';
 import { UserService } from './_services/user.service';
 import { PetsDescriptionComponent } from './pets-description/pets-description.component';
 import { DynamicPetDescriptionService } from './_services/dynamic-pet-description.service';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule , HttpClientModule, AppRoutingModule],
+  imports:      [ BrowserModule, FormsModule , HttpClientModule, RouterModule, AppRoutingModule],
   declarations: [ AppComponent,  HomeComponent, HeaderComponent, PetsComponent, LoginComponent, E404Component, PetsDescriptionComponent ],
   bootstrap:    [ AppComponent ],
   providers: [AnimalService, UserService, DynamicPetDescriptionService],

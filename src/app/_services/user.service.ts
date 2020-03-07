@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { UserCredentials, LoginResponse } from '../_models/animal.interface';
+import { UserCredentials, LoginResponse } from '../_models/animals';
 import {Observable, of, Subject} from 'rxjs';
 
 @Injectable()

@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AnimalService } from '../_services/animal.service';
 import { AnimalStructure } from '../_models/animals';
 import { DynamicPetDescriptionService } from '../_services/dynamic-pet-description.service';
+import { Observable, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-pets',
   templateUrl: './pets.component.html',
   styleUrls: ['./pets.component.css']
 })
-export class PetsComponent implements OnInit {
+export class PetsComponent implements OnInit, OnDestroy {
 
   animals: AnimalStructure[] = [];
 
@@ -18,10 +19,18 @@ export class PetsComponent implements OnInit {
     this.animalService.getAnimals().subscribe(response => {
       this.animals = response;
     });
+    this.animalService.closePetsDynamicModal.subscribe(() => this.dialogService.removeDialogComponentFromBody());
   }
 
   openPetsDescriptionModal(animal: AnimalStructure) {
     this.dialogService.appendDialogComponentToBody(animal);
+  }
+
+  ngOnDestroy() {
+    const getAnimals = this.animalService.getAnimals() as Subject<any>;
+    getAnimals.unsubscribe();
+    this.animalService.closePetsDynamicModal.unsubscribe();
+
   }
 
 }

@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
-import { AnimalStructure } from '../_models/animal.interface';
+import { AnimalStructure } from '../_models/animals';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable, of, Subject } from 'rxjs';
 import {map} from 'rxjs/operators';
 import {API_ENDPOINT } from '../_constants/animal.enum';
 
 @Injectable()
 export class AnimalService {
 
-animals: AnimalStructure[] = [];
+  closePetsDynamicModal = new Subject<boolean>();
+  animals: AnimalStructure[] = [];
+  
   constructor(private http: HttpClient) { }
 
   getAnimals() {
@@ -26,5 +28,6 @@ animals: AnimalStructure[] = [];
     return this.http.get(API_ENDPOINT + 'assets/animals.json') as Observable<AnimalStructure[]>;
   }
 
+  
 
 }
