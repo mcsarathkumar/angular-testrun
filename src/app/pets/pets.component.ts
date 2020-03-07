@@ -30,7 +30,6 @@ export class PetsComponent implements OnInit, OnDestroy {
     const getAnimals = this.animalService.getAnimals() as Subject<any>;
     getAnimals.unsubscribe();
     this.animalService.closePetsDynamicModal.unsubscribe();
-
   }
 
 }
