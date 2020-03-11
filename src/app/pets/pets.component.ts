@@ -9,7 +9,7 @@ import { Observable, Subject } from 'rxjs';
   templateUrl: './pets.component.html',
   styleUrls: ['./pets.component.css']
 })
-export class PetsComponent implements OnInit, OnDestroy {
+export class PetsComponent implements OnInit {
 
   animals: AnimalStructure[] = [];
 
@@ -19,17 +19,10 @@ export class PetsComponent implements OnInit, OnDestroy {
     this.animalService.getAnimals().subscribe(response => {
       this.animals = response;
     });
-    this.animalService.closePetsDynamicModal.subscribe(() => this.dialogService.removeDialogComponentFromBody());
   }
 
   openPetsDescriptionModal(animal: AnimalStructure) {
     this.dialogService.appendDialogComponentToBody(animal);
-  }
-
-  ngOnDestroy() {
-    const getAnimals = this.animalService.getAnimals() as Subject<any>;
-    getAnimals.unsubscribe();
-    this.animalService.closePetsDynamicModal.unsubscribe();
   }
 
 }

@@ -13,7 +13,7 @@ export class AnimalService {
   
   constructor(private http: HttpClient) { }
 
-  getAnimals() {
+  getAnimals(): Observable<AnimalStructure[]> {
     if (this.animals.length > 0) {
       return of(this.animals);
     } else {
