@@ -25,4 +25,7 @@ export class PetsComponent implements OnInit {
     this.dialogService.appendDialogComponentToBody(animal);
   }
 
+  deleteAnimal(id: number) {
+    this.animalService.animals.splice(id, 1);
+  }
 }

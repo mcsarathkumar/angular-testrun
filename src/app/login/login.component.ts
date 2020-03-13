@@ -23,11 +23,7 @@ export class LoginComponent {
     this.userService.login(userCredentials).subscribe((response: LoginResponse) => {
       if (response.isAuthorized) {
         this.userService.credentialValueChange.next(true);
-        if (response.isAdmin) {
-          this.router.navigate(['add']);
-        } else {
-          this.router.navigate(['pets']);
-        }
+        this.router.navigate(['pets']);
       } else {
         this.errorMessage = 'Invalid Credentials';
       }

@@ -1,11 +1,15 @@
 <div class="row row-cols-3" *ngIf="animals.length > 0">
-  <div class="col mb-4" *ngFor="let animal of animals">
+  <div class="col mb-4" *ngFor="let animal of animals; let i = index">
     <div class="card">
       <img [src]="animal.image" class="card-img-top" [alt]="animal.name">
       <div class="card-body">
         <h5 class="card-title">{{animal.name}}</h5>
         <p class="card-text text-truncate-3">{{animal.description}}</p>
-        <button type="button" class="btn btn-primary" (click)="openPetsDescriptionModal(animal)">Know More</button>
+        <div class="d-flex justify-content-around">
+        <button type="button" class="btn btn-primary" (click)="openPetsDescriptionModal(animal)">Read More</button>
+        <button type="button" class="btn btn-secondary" (click)="openPetsDescriptionModal(animal)">Edit</button>
+        <button type="button" class="btn btn-light" (click)="deleteAnimal(i)">Delete</button>
+        </div>
       </div>
     </div>
   </div>
