@@ -11,6 +11,5 @@ export class AppComponent implements OnInit {
   constructor(private animalService: AnimalService, private dialogService: DynamicPetDescriptionService) {}
 
   ngOnInit() {
-    // this.animalService.closePetsDynamicModal.subscribe(() => {this.dialogService.removeDialogComponentFromBody();console.log('app')});
   }
 }

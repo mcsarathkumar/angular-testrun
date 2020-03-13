@@ -8,7 +8,6 @@ import {API_ENDPOINT } from '../_constants/animal.enum';
 @Injectable()
 export class AnimalService {
 
-  closePetsDynamicModal = new Subject<boolean>();
   animals: AnimalStructure[] = [];
   
   constructor(private http: HttpClient) { }
