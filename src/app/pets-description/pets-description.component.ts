@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, Renderer2, ViewChild, ElementRef, Input } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Renderer2, ViewChild, ElementRef, Input, HostListener } from '@angular/core';
 import { AnimalStructure } from '../_models/animals';
 import { AnimalService } from '../_services/animal.service';
 
@@ -10,7 +10,16 @@ import { AnimalService } from '../_services/animal.service';
 export class PetsDescriptionComponent implements OnInit, AfterViewInit {
 
   @Input() petsDetails: AnimalStructure = null;
+  @Input() editId = null;
   @ViewChild('modal', {static: false}) myModal: ElementRef;
+  
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    if (event.keyCode === 27) {
+      this.closeModal();
+    }
+  }
+
   constructor(public renderer: Renderer2, public el: ElementRef, private animalService: AnimalService) { }
 
   ngOnInit() {
@@ -37,4 +46,5 @@ export class PetsDescriptionComponent implements OnInit, AfterViewInit {
     document.getElementById('backdropMyModal').remove();
     this.el.nativeElement.remove();
   }
+  
 }

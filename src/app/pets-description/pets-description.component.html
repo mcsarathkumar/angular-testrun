@@ -8,15 +8,23 @@
         </button>
       </div>
       <div class="modal-body">
+        <div *ngIf="editId !== null">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Name</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Pet Name" name="petName" [(ngModel)]="petsDetails.name">
+          </div>
+          <hr>
+          <p><strong>Preview</strong></p>
+        </div>
         <img [src]="petsDetails.image" style="width:75%; object-fit: cover">
         <p>{{petsDetails.description}}</p>
-        <p>{{petsDetails.quantity}} {{petsDetails.name}}{{petsDetails.quantity > 1 ? 's are' : ' is'}} available in stock</p>
-        <!-- <p>{{petsDetails.description}}</p> -->
+        <p>Qualtity : {{petsDetails.quantity}}</p>
       </div>
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <div class="modal-footer" *ngIf="editId !== null">
         <button type="button" class="btn btn-primary">Save changes</button>
-      </div> -->
+      </div>
     </div>
   </div>
 </div>

@@ -11,7 +11,7 @@ constructor(
     private injector: Injector
   ) {}
 
-  appendDialogComponentToBody(petsDetails: AnimalStructure) {
+  appendDialogComponentToBody(petsDetails: AnimalStructure, id) {
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(PetsDescriptionComponent);
     const componentRef = componentFactory.create(this.injector);
     this.appRef.attachView(componentRef.hostView);
@@ -19,6 +19,7 @@ constructor(
     document.body.appendChild(domElem);
     this.dialogComponentRef = componentRef;
     this.dialogComponentRef.instance['petsDetails'] = petsDetails;
+    this.dialogComponentRef.instance['editId'] = id;
   }
 
   removeDialogComponentFromBody() {

@@ -21,8 +21,12 @@ export class PetsComponent implements OnInit {
     });
   }
 
-  openPetsDescriptionModal(animal: AnimalStructure) {
-    this.dialogService.appendDialogComponentToBody(animal);
+  openPetsDescriptionModal(animal: AnimalStructure, id = null) {
+    if (id !== null) {
+      const animalData = this.animals.slice(id, id + 1);
+      animal = animalData as AnimalStructure;
+    }
+    this.dialogService.appendDialogComponentToBody(animal, id);
   }
 
   deleteAnimal(id: number) {
