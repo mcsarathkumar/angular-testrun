@@ -24,7 +24,8 @@ export class PetsComponent implements OnInit {
   openPetsDescriptionModal(animal: AnimalStructure, id = null) {
     if (id !== null) {
       const animalData = this.animals.slice(id, id + 1);
-      animal = animalData as AnimalStructure;
+      console.log(...animalData);
+      animal = animalData[0];
     }
     this.dialogService.appendDialogComponentToBody(animal, id);
   }
