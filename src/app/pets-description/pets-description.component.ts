@@ -43,7 +43,9 @@ export class PetsDescriptionComponent implements OnInit, AfterViewInit {
   closeModal() {
     this.renderer.removeClass(this.myModal.nativeElement, 'show');
     this.renderer.setStyle(this.myModal.nativeElement, 'display', 'none');
-    document.getElementById('backdropMyModal').remove();
+    if (document.getElementById('backdropMyModal') !== null) {
+      document.getElementById('backdropMyModal').remove();
+    }
     this.el.nativeElement.remove();
   }
   
